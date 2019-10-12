@@ -1,4 +1,4 @@
-$(call inherit-product, device/hardkernel/common/core_odroid.mk)
+$(call inherit-product, device/capsulecorp/common/core_odroid.mk)
 
 PRODUCT_PACKAGES += \
     imageserver \
@@ -43,14 +43,14 @@ PRODUCT_COPY_FILES += \
 
 # copy lowmem_manage.sh
 PRODUCT_COPY_FILES += \
-	device/hardkernel/common/lowmem_manage.sh:system/bin/lowmem_manage.sh
+	device/capsulecorp/common/lowmem_manage.sh:system/bin/lowmem_manage.sh
 
 #copy lowmemorykiller.txt
 ifeq ($(BUILD_WITH_LOWMEM_COMMON_CONFIG),true)
 PRODUCT_COPY_FILES += \
-	device/hardkernel/common/config/lowmemorykiller_2G.txt:system/etc/lowmemorykiller_2G.txt \
-	device/hardkernel/common/config/lowmemorykiller.txt:system/etc/lowmemorykiller.txt \
-	device/hardkernel/common/config/lowmemorykiller_512M.txt:system/etc/lowmemorykiller_512M.txt
+	device/capsulecorp/common/config/lowmemorykiller_2G.txt:system/etc/lowmemorykiller_2G.txt \
+	device/capsulecorp/common/config/lowmemorykiller.txt:system/etc/lowmemorykiller.txt \
+	device/capsulecorp/common/config/lowmemorykiller_512M.txt:system/etc/lowmemorykiller_512M.txt
 endif
 
 # USB
